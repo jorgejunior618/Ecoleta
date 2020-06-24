@@ -25,21 +25,14 @@ function getCities(event) {
   .then(res => res.json())
   .then(cities => {
     for( const city of cities ) {
-      selectCity.innerHTML += `<option value="${city.id}">${city.nome}</option>`
+      selectCity.innerHTML += `<option value="${city.nome}">${city.nome}</option>`
       selectCity.disabled = false;
     }
   })
 }
 
-function changeInputCity(event) {
-  const cityInput = document.querySelector('input[name=cidade]');
-  cityInput.value = event.target.options[event.target.selectedIndex].text;
-}
-
 loadUfs();
 
 const selectUf = document.querySelector('select[name=uf]');
-const selectCity = document.querySelector('select[name=city]');
 
 selectUf.addEventListener('change', e => getCities(e));
-selectCity.addEventListener('change', e => changeInputCity(e));
