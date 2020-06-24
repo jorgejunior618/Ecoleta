@@ -36,3 +36,32 @@ loadUfs();
 const selectUf = document.querySelector('select[name=uf]');
 
 selectUf.addEventListener('change', e => getCities(e));
+
+
+const colectItems = document.querySelectorAll('.items-grid li');
+const itemsInput = document.querySelector('input[name=items]');
+
+let selectedItems = [];
+
+function handleSelectedItem(event) {
+  const itemLi = event.target;
+  const itemId = Number(itemLi.dataset.id);
+
+  itemLi.classList.toggle('selected');
+  const alreadySelected = selectedItems.findIndex(item => item === itemId);
+
+  if(alreadySelected >= 0) {
+    const filteredList = selectedItems.filter(item => item !== itemId);
+    selectedItems = filteredList;
+  } else {
+    selectedItems.push(itemId);
+  }
+
+  selectedItems.sort();
+
+  itemsInput.value = selectedItems. join(', ');
+}
+
+colectItems.forEach(item => {
+  item.addEventListener('click', handleSelectedItem);
+});
