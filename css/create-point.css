@@ -1,0 +1,104 @@
+#create-point-page {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+#create-point-page header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 48px;
+}
+
+#create-point-page header a {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  color: var(--title-color);
+}
+
+#create-point-page header a span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url('../assets/arrow-left.svg');
+  margin-right: 16px;
+}
+
+#create-point-page form {
+  background-color: white;
+  margin: 80px auto 0;
+  padding: 64px;
+  border-radius: 8px;
+  max-width: 730px;
+}
+
+#create-point-page form h1 {
+  font-size: 36px;
+}
+
+#create-point-page form fieldset {
+  margin-top: 64px;
+  border: none;
+}
+
+#create-point-page form fieldset legend h2 {
+  margin-bottom: 40px;
+  font-size: 24px;
+}
+
+#create-point-page form fieldset .field {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+#create-point-page form fieldset .field-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+#create-point-page form fieldset .field-group .field + .field {
+  margin-left: 24px;
+}
+
+#create-point-page form fieldset .field input,
+#create-point-page form fieldset .field select {
+  background-color: #f0f0f5;
+  border: none;
+  border-radius: 8px;
+  padding: 16px 24px;
+  font-size: 16px;
+  outline: none;
+  max-width: 100%;
+}
+
+#create-point-page form fieldset .field select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+#create-point-page form fieldset .field label {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+#create-point-page form button {
+  background-color: var(--primary-color);
+  width: 260px;
+  height: 56px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 40px;
+  transition: background-color .5s;
+}
+
+#create-point-page form button:hover {
+  background-color: #2fb86e;
+}
