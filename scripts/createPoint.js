@@ -18,6 +18,8 @@ function getCities(event) {
   `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${event.target.value}/municipios`;
 
   ufInput.value = event.target.options[event.target.selectedIndex].text;
+  selectCity.innerHTML = '<option value="">Selecione a Cidade</option>'
+  selectCity.disabled = true;
 
   fetch(apiUrl)
   .then(res => res.json())
