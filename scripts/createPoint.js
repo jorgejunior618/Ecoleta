@@ -29,8 +29,15 @@ function getCities(event) {
   })
 }
 
+function changeInputCity(event) {
+  const cityInput = document.querySelector('input[name=cidade]');
+  cityInput.value = event.target.options[event.target.selectedIndex].text;
+}
+
 loadUfs();
 
 const selectUf = document.querySelector('select[name=uf]');
+const selectCity = document.querySelector('select[name=city]');
 
 selectUf.addEventListener('change', e => getCities(e));
+selectCity.addEventListener('change', e => changeInputCity(e));
